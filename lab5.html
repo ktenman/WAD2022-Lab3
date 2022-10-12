@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function increaseCounter() {
+        if (localStorage.clickCount) {
+            localStorage.clickCount = Number(localStorage.clickCount) + 1
+        } else {
+            localStorage.clickCount = 1
+        }
+        document.getElementById("counter").innerHTML =
+            `You have clicked ${localStorage.clickCount} time(s)`
+    }
+</script>
+
+<button onclick="increaseCounter()">Click</button>
+
+<div id="counter"></div>
+
+</body>
+</html>
